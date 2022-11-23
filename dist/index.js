@@ -1101,8 +1101,6 @@ const { buildSlackAttachments, formatChannelName } = __webpack_require__(543);
 
     const response = await slack.chat[apiMethod](args);
     console.log('Successfully triggered Slack message', { response });
-
-    core.setOutput('message_id', response.ts);
   } catch (error) {
     core.setFailed(error);
   }
