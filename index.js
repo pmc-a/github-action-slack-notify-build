@@ -37,6 +37,7 @@ const { buildSlackAttachments, formatChannelName } = require('./src/utils');
     }
 
     const response = await slack.chat[apiMethod](args);
+    console.log('Successfully triggered Slack message', { response });
 
     core.setOutput('message_id', response.ts);
   } catch (error) {
